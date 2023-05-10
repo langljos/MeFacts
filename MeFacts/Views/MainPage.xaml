@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:MeFacts"
              mc:Ignorable="d" x:Class="MeFacts.MainPage">
     <StackLayout>
-        <ListView ItemsSource="{x:Static local:MeFactData.All}"
+        <ListView x:Name="listView"
               RowHeight="70" ItemSelected="OnSelection" >
             <ListView.ItemTemplate>
                 <DataTemplate>

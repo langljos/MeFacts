@@ -24,5 +24,12 @@ namespace MeFacts
             MeFactData fact = (MeFactData)e.SelectedItem;
             DisplayAlert("The Fact", fact.TheFact, "Ok");
         }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            listView.ItemsSource = await App.Database.GetItemsAsync();
+        }
     }
 }
